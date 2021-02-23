@@ -1,0 +1,36 @@
+.header {
+    nav {
+        padding: 24px;
+    }
+
+    &__logo {}
+
+    &__menu {
+
+        //mobile menu
+        >span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $darkBlue;
+            color:$grayishBlue;
+
+            //:not(:last-child) property did not include last span in a column so when you inspect form browser the last span margin-bottom doestn exist.
+            &:not(:last-child) {
+                margin-bottom: 3px;
+            }
+        }
+    }
+
+    &__links {
+        a {
+            font-size: $font-sm; 
+
+        }
+
+    }
+    &__cta{
+        font-size: $font-sm;
+        color: $white;
+    }
+}
